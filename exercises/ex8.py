@@ -4,7 +4,9 @@
 
 def find_oldest_student(students):
     # Your code here
-    pass
+    oldest = max(students)
+    return oldest
+    
 
 
 # Test the function

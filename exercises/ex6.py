@@ -4,8 +4,12 @@
 
 def filter_uppercase_strings(strings):
     # Your code here
-    pass
-
+    result = []
+    # print(strings[0][0].isupper())
+    for s in strings:
+        if s[0].isupper():
+            result.append(s)
+    return tuple(result) 
 
 # Test the function
 strings = ("Apple", "banana", "Cat", "dog", "Elephant", "Frog")

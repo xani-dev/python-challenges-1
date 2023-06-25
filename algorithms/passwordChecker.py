@@ -5,11 +5,15 @@
 # Includes at least one digit
 #
 # The function should RETURN a boolean value indicating whether the password meets the criteria.
-
+import re
 def check_password_strength(password):
     # TODO: Implement the password strength checking logic
-    pass
-
+    checked = re.search("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$", password)
+    if checked:
+        return True
+    else:
+        return False
+    return(checked)
 # Test the function
 password = input("Enter a password: ")
 is_strong = check_password_strength(password)

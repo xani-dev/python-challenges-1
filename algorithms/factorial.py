@@ -2,9 +2,10 @@
 # hint: try recursion
 
 def factorial(n):
-   pass
-
-
+   if n==1 or n==0:
+      return 1
+   else:
+      return (n*factorial(n-1))
 
 # Test case
 number = 5
