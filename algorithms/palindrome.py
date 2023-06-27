@@ -3,10 +3,17 @@
 # disregarding spaces, punctuation, and capitalization.
 #
 # RETURNS a boolean
-
+import re
 def is_palindrome(text):
     # TODO: Check if text is a palindrome
-    pass
+    text_to_check = re.sub('\W+','', text.upper())
+    text1= text_to_check
+    text2 = text_to_check[::-1]
+    if text1 == text2:
+        return True
+    else:
+        return False
+    
 
 # Test the function
 text = input("Enter a string: ")
