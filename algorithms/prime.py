@@ -6,18 +6,22 @@
 def is_prime_number(num):
      # TODO: Check if num is a prime number
     if num > 1:
-        for i in range(2, int(num/2) + 1):
+        for i in range(2, int(num/2)+1):
             if (num % i)==0:
-                return False
-            break
-        else:True
+                return False      
+        else:
+            return True
+    else:
+        return False
 
 # Test the function
 num = int(input("Enter a number: "))
 is_prime = is_prime_number(num)
+print(is_prime)
 if is_prime:
     print(num, "is a prime number.")
-else: print(num, "is not a prime number.")
+else: 
+    print(num, "is not a prime number.")
     
 
 
